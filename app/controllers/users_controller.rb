@@ -8,12 +8,14 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(users_params)
+    @user = User.new(user_params)
     if @user.save
-      redirect_to root_path
+      flash[:notice]="user saved!"
+      redirect_to root_path and return
+    else
+      flash[:alert]="invalid email"
+      render :new
     end
-  else
-    return render :new
   end
 
   def show
@@ -24,12 +26,15 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @user = User.delete(params[:id])
+    if @user = User.delete(params[:id])
+      redirect_to root_path and return
+    end
+
   end
 
   private
 
-  def users_params
+  def user_params
     params.require(:user).permit(:name, :email)
   end
 

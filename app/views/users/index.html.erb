@@ -1,6 +1,6 @@
 <h1> listing users </h1>
-  <table class="table">
-    <thead>
+  <table class="table table-hover table-bordered">
+    <thead class="thead-light">
       <tr>
         <th scope="col">Name</th>
         <th scope="col">Email</th>
@@ -9,7 +9,6 @@
     </thead>
     <% @users.each do |user| %>
       <tr>
-        <td>me</td>
         <td><%= user.name %></td>
         <td><%= user.email %></td>
         <td><%= link_to 'Show', user %></td>
