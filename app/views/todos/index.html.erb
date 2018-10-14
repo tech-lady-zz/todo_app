@@ -1,25 +1,26 @@
 <h1>Todo Lists</h1>
-<table>
-<thead>
-<tr>
-<th>Todo Title</th>
-<th>Content</th>
-<th>Created At</th>
-</tr>
-</thead>
-<% @todos.each do |todo| %>
-<tr>
-<td><%= @todo.name%></td>
-<td><<%= @todo.content %></td>
-<td><%= @todo.created_at %></td>
-<td><%=link_to 'Show', todo %></td>
-<td><%=link_to 'Edit', edit_todo_path(todo) %></td>
-<td><%=link_to 'Delete', todo, method: :delete,
-                                data:{confirm: "Are you sure"} 
-    %>
-</td>
-</tr>
-<% end %>
+<table class= "table-hover table-bordered">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Todo Title</th>
+      <th scope="col">Content</th>
+      <th scope="col">Created At</th>
+      <th scope="col" colspan="3"></th>
+    </tr>
+  </thead>
+  <% @todos.each do |todo| %>
+    <tr>
+      <td><%= todo.title%></td>
+      <td><%= todo.content %></td>
+      <td><%= todo.created_at %></td>
+      <td><%=link_to 'Show', todo %></td>
+      <td><%=link_to 'Edit', edit_todo_path(todo) %></td>
+      <td><%=link_to 'Delete', todo, method: :delete,
+                                      data:{confirm: "Are you sure"} 
+          %>
+      </td>
+    </tr>
+  <% end %>
 </table>
 
   <br>

@@ -1,7 +1,9 @@
 <h1>Todo</h1>
 <%= form_for @todo do |t|%>
-<%= f.label :name, class:''%> <br>
-<%= f.text_field :name, required: true, class: ''%>
-<%= f.label :content, class: ''%> <br>
-<%= f.text_field :content, required: true, class: ''%>
+<%= t.label :title, class:''%> <br>
+<%= t.text_field :title, required: true, class: ''%>
+<%= t.label :content, class: ''%> <br>
+<%= t.text_field :content, required: true, class: ''%>
+<br>
+<%= t.button 'Create Todo' %>
 <% end %>

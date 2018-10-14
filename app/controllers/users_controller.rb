@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:notice]="user saved!"
-      redirect_to root_path and return
+      redirect_to users_path and return
     else
       flash[:alert]="invalid email"
       render :new
@@ -27,7 +27,7 @@ class UsersController < ApplicationController
 
   def destroy
     if @user = User.delete(params[:id])
-      redirect_to root_path and return
+      redirect_to user_path and return
     end
 
   end
