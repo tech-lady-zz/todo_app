@@ -17,6 +17,8 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import "jquery.dataTables";
+ @import "todos";
 
  body {
    background-color: #dddddd;

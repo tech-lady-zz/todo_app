@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   root 'todos#index'
   resources :users
   resources :todos 
-  
+  resources :sessions, only: [:create, :new]
+
 end

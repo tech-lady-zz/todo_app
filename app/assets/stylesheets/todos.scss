@@ -1,3 +1,27 @@
 // Place all the styles related to the Todos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.table-container {
+  margin-top: 50px;
+  border: 1px solid #1D2731;
+}
+
+.btn-modify {
+  color: #fff;
+  background-color: #563d7c;
+  border-color: #dddddd;
+}
+
+
+.form-modify {
+  padding-left: 69px;
+  padding-right: 0px;
+}
+
+.modify-title {
+  margin-left: 21px;
+}
+
+.title-edit {
+  margin-top:20px
+}
